@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2 - POO em PHP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .exercises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .exercise-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .exercise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .exercise-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .exercise-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .exercise-card .requirements {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .exercise-card .requirements h4 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .exercise-card .requirements ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .exercise-card .requirements li {
+            color: #6c757d;
+            margin-bottom: 5px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .exercise-card .requirements li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .run-button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .run-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .run-button:active {
+            transform: scale(0.95);
+        }
+
+        .results-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-top: 30px;
+        }
+
+        .results-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .results-container {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            max-height: 500px;
+            overflow-y: auto;
+            border: 2px solid #e9ecef;
+        }
+
+        .loading {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        .error {
+            color: #dc3545;
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .success {
+            color: #155724;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .exercises-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏫 Aula 2 - POO em PHP</h1>
+            <p>Programação Orientada a Objetos - Exercícios Práticos</p>
+        </div>
+
+        <div class="exercises-grid">
+            <!-- Exercício 1 -->
+            <div class="exercise-card">
+                <h3>🏦 Classe Conta com Construtor</h3>
+                <p>Crie uma classe Conta que tenha um construtor para inicializar o titular e o saldo inicial.</p>
+                
+                <div class="requirements">
+                    <h4>Requisitos:</h4>
+                    <ul>
+                        <li>Atributos: titular, saldo, número</li>
+                        <li>Construtor com titular e saldo</li>
+                        <li>Número gerado automaticamente</li>
+                        <li>Método exibirDados()</li>
+                        <li>Método depositar()</li>
+                    </ul>
+                </div>
+                
+                <button class="run-button" onclick="runExercise('exercicio1_conta.php')">
+                    ▶️ Executar Exercício 1
+                </button>
+            </div>
+
+            <!-- Exercício 2 -->
+            <div class="exercise-card">
+                <h3>👨‍🎓 Modificadores de Acesso - Classe Aluno</h3>
+                <p>Crie uma classe Aluno com diferentes níveis de acesso aos atributos.</p>
+                
+                <div class="requirements">
+                    <h4>Requisitos:</h4>
+                    <ul>
+                        <li>Nome: público (leitura/escrita)</li>
+                        <li>Matrícula: privado (somente leitura)</li>
+                        <li>Notas: privado (acessível apenas por métodos)</li>
+                        <li>Média: privado (calculada internamente)</li>
+                    </ul>
+                </div>
+                
+                <button class="run-button" onclick="runExercise('exercicio2_aluno.php')">
+                    ▶️ Executar Exercício 2
+                </button>
+            </div>
+
+            <!-- Exercício 3 -->
+            <div class="exercise-card">
+                <h3>📚 Getters e Setters - Classe Livro</h3>
+                <p>Implemente uma classe Livro com getters e setters que façam validações.</p>
+                
+                <div class="requirements">
+                    <h4>Requisitos:</h4>
+                    <ul>
+                        <li>Ano não pode ser futuro</li>
+                        <li>Páginas devem ser positivas</li>
+                        <li>Título e autor não vazios</li>
+                        <li>Tratamento de exceções</li>
+                    </ul>
+                </div>
+                
+                <button class="run-button" onclick="runExercise('exercicio3_livro.php')">
+                    ▶️ Executar Exercício 3
+                </button>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <h2>📊 Resultados da Execução</h2>
+            <div class="results-container" id="resultsContainer">
+                <div class="loading">Clique em um exercício para executar...</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Programação 2 - PHP | Aula 2 - POO</p>
+        </div>
+    </div>
+
+    <script>
+        async function runExercise(filename) {
+            const resultsSection = document.getElementById('resultsSection');
+            const resultsContainer = document.getElementById('resultsContainer');
+            
+            // Mostrar seção de resultados
+            resultsSection.style.display = 'block';
+            
+            // Mostrar loading
+            resultsContainer.innerHTML = '<div class="loading">Executando exercício... Aguarde...</div>';
+            
+            try {
+                // Fazer requisição para executar o PHP
+                const response = await fetch(`run_exercise.php?file=${filename}`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.text();
+                
+                // Exibir resultados
+                resultsContainer.innerHTML = `<div class="success">✅ Exercício executado com sucesso!</div>\n\n${result}`;
+                
+            } catch (error) {
+                console.error('Erro:', error);
+                resultsContainer.innerHTML = `<div class="error">❌ Erro ao executar exercício: ${error.message}</div>`;
+            }
+        }
+
+        // Scroll suave para os resultados
+        function scrollToResults() {
+            const resultsSection = document.getElementById('resultsSection');
+            if (resultsSection.style.display !== 'none') {
+                resultsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Modificar a função runExercise para incluir scroll
+        const originalRunExercise = runExercise;
+        runExercise = function(filename) {
+            originalRunExercise(filename);
+            setTimeout(scrollToResults, 100);
+        };
+    </script>
+</body>
+</html>
