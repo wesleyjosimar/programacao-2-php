@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de POO - Aula 3</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        .content {
+            padding: 30px;
+        }
+        .exercise {
+            background: #f8f9fa;
+            border-left: 5px solid #007bff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .exercise h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+        .exercise p {
+            color: #495057;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .btn-success {
+            background: #28a745;
+        }
+        .btn-success:hover {
+            background: #1e7e34;
+        }
+        .btn-info {
+            background: #17a2b8;
+        }
+        .btn-info:hover {
+            background: #117a8b;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+            color: #6c757d;
+        }
+        .code-preview {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .explanation {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .explanation h4 {
+            color: #1976d2;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏗️ Programação Orientada a Objetos</h1>
+            <p>Exercícios Práticos - Aula 3 | 4ª Fase - Ciência da Computação</p>
+        </div>
+        
+        <div class="content">
+            <div class="exercise">
+                <h3>1. Classe Produto - Atributos Públicos</h3>
+                <p>Criar uma classe Produto com atributos nome e preco públicos, instanciar e exibir valores.</p>
+                <a href="exercicio1.php" class="btn btn-success">Executar Exercício 1</a>
+                <a href="Produto.php" class="btn btn-info">Ver Código</a>
+            </div>
+
+            <div class="exercise">
+                <h3>2. Classe Produto - Encapsulamento</h3>
+                <p>Modificar classe Produto com preco privado e métodos get/set para manipulação.</p>
+                <a href="exercicio2.php" class="btn btn-success">Executar Exercício 2</a>
+                <a href="ProdutoEncapsulado.php" class="btn btn-info">Ver Código</a>
+            </div>
+
+            <div class="exercise">
+                <h3>3. Classe ContaBancaria - Métodos de Operação</h3>
+                <p>Criar classe ContaBancaria com saldo privado e métodos para depositar e sacar.</p>
+                <a href="exercicio3.php" class="btn btn-success">Executar Exercício 3</a>
+                <a href="ContaBancaria.php" class="btn btn-info">Ver Código</a>
+            </div>
+
+            <div class="exercise">
+                <h3>4. Herança - Funcionario e Gerente</h3>
+                <p>Classe Funcionario com salario protegido e subclasse Gerente para acesso e modificação.</p>
+                <a href="exercicio4.php" class="btn btn-success">Executar Exercício 4</a>
+                <a href="Funcionario.php" class="btn btn-info">Ver Código</a>
+            </div>
+
+            <div class="exercise">
+                <h3>5. Classe Usuario - Verificação de Senha</h3>
+                <p>Implementar classe Usuario com senha privada e método verificarSenha().</p>
+                <a href="exercicio5.php" class="btn btn-success">Executar Exercício 5</a>
+                <a href="Usuario.php" class="btn btn-info">Ver Código</a>
+            </div>
+
+            <div class="exercise">
+                <h3>6. Herança - Config e Subclasses</h3>
+                <p>Classe Config com parametros protegidos e subclasses para leitura e modificação.</p>
+                <a href="exercicio6.php" class="btn btn-success">Executar Exercício 6</a>
+                <a href="Config.php" class="btn btn-info">Ver Código</a>
+            </div>
+
+            <div class="exercise">
+                <h3>7. Classe Pedido - Gerenciamento de Array</h3>
+                <p>Desenvolver classe Pedido com itens privados e métodos para inserir e listar.</p>
+                <a href="exercicio7.php" class="btn btn-success">Executar Exercício 7</a>
+                <a href="Pedido.php" class="btn btn-info">Ver Código</a>
+            </div>
+
+            <div class="exercise">
+                <h3>8. Classe Cliente - Diferentes Níveis de Acesso</h3>
+                <p>Classe Cliente com nome público, CPF protegido e telefone privado. Testar acessos.</p>
+                <a href="exercicio8.php" class="btn btn-success">Executar Exercício 8</a>
+                <a href="Cliente.php" class="btn btn-info">Ver Código</a>
+            </div>
+
+            <div class="exercise">
+                <h3>9. Refatoração - ContaBancaria com Validação</h3>
+                <p>Refatorar ContaBancaria para permitir saque apenas com saldo suficiente.</p>
+                <a href="exercicio9.php" class="btn btn-success">Executar Exercício 9</a>
+                <a href="ContaBancariaRefatorada.php" class="btn btn-info">Ver Código</a>
+            </div>
+
+            <div class="exercise">
+                <h3>10. Classe ConexaoBD - Encapsulamento de Conexão</h3>
+                <p>Projetar classe ConexaoBD com método privado conectar() e público getConexao().</p>
+                <a href="exercicio10.php" class="btn btn-success">Executar Exercício 10</a>
+                <a href="ConexaoBD.php" class="btn btn-info">Ver Código</a>
+            </div>
+
+            <div class="exercise">
+                <h3>🏃‍♂️ Executar Todos os Exercícios</h3>
+                <p>Execute todos os exercícios de uma vez para ver os resultados completos.</p>
+                <a href="todos_exercicios.php" class="btn btn-success">Executar Todos</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Desenvolvido por:</strong> Aluno da 4ª Fase - Ciência da Computação</p>
+            <p><strong>Disciplina:</strong> Programação 2 - PHP</p>
+            <p><strong>Conceitos Aplicados:</strong> Encapsulamento, Herança, Polimorfismo, Abstração</p>
+        </div>
+    </div>
+</body>
+</html>

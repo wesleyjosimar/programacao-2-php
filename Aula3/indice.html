@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice - Aula 3 POO</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 30px;
+        }
+        .quick-nav {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .quick-nav h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .nav-item {
+            background: #e9ecef;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .nav-item:hover {
+            background: #007bff;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .nav-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+        .btn-success {
+            background: #28a745;
+        }
+        .btn-success:hover {
+            background: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Índice Rápido - Aula 3</h1>
+            <p>Navegação Rápida pelos Exercícios de POO</p>
+        </div>
+        
+        <div class="content">
+            <div class="quick-nav">
+                <h3>🚀 Acesso Rápido</h3>
+                <div class="nav-grid">
+                    <div class="nav-item">
+                        <a href="index.html">
+                            <strong>🏠 Menu Principal</strong><br>
+                            <small>Navegação completa</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="todos_exercicios.php">
+                            <strong>🎯 Todos os Exercícios</strong><br>
+                            <small>Executar tudo de uma vez</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="README.md">
+                            <strong>📖 Documentação</strong><br>
+                            <small>Explicações detalhadas</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-nav">
+                <h3>📋 Lista de Exercícios</h3>
+                <div class="nav-grid">
+                    <div class="nav-item">
+                        <a href="exercicio1.php">
+                            <strong>1. Produto</strong><br>
+                            <small>Atributos públicos</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="exercicio2.php">
+                            <strong>2. Encapsulamento</strong><br>
+                            <small>Get/Set métodos</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="exercicio3.php">
+                            <strong>3. Conta Bancária</strong><br>
+                            <small>Operações bancárias</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="exercicio4.php">
+                            <strong>4. Herança</strong><br>
+                            <small>Funcionário/Gerente</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="exercicio5.php">
+                            <strong>5. Usuário</strong><br>
+                            <small>Verificação de senha</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="exercicio6.php">
+                            <strong>6. Config</strong><br>
+                            <small>Subclasses</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="exercicio7.php">
+                            <strong>7. Pedido</strong><br>
+                            <small>Gerenciamento de array</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="exercicio8.php">
+                            <strong>8. Cliente</strong><br>
+                            <small>Níveis de acesso</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="exercicio9.php">
+                            <strong>9. Refatoração</strong><br>
+                            <small>Validação de saque</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="exercicio10.php">
+                            <strong>10. Conexão BD</strong><br>
+                            <small>Encapsulamento</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-nav">
+                <h3>💻 Ver Código das Classes</h3>
+                <div class="nav-grid">
+                    <div class="nav-item">
+                        <a href="Produto.php">
+                            <strong>Produto.php</strong><br>
+                            <small>Classe básica</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="ProdutoEncapsulado.php">
+                            <strong>ProdutoEncapsulado.php</strong><br>
+                            <small>Com encapsulamento</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="ContaBancaria.php">
+                            <strong>ContaBancaria.php</strong><br>
+                            <small>Operações bancárias</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="Funcionario.php">
+                            <strong>Funcionario.php</strong><br>
+                            <small>Herança</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="Usuario.php">
+                            <strong>Usuario.php</strong><br>
+                            <small>Segurança</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="Config.php">
+                            <strong>Config.php</strong><br>
+                            <small>Subclasses</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="Pedido.php">
+                            <strong>Pedido.php</strong><br>
+                            <small>Array privado</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="Cliente.php">
+                            <strong>Cliente.php</strong><br>
+                            <small>Múltiplos acessos</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="ContaBancariaRefatorada.php">
+                            <strong>ContaBancariaRefatorada.php</strong><br>
+                            <small>Validações</small>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="ConexaoBD.php">
+                            <strong>ConexaoBD.php</strong><br>
+                            <small>Padrão Singleton</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="index.html" class="btn btn-success">🏠 Menu Principal</a>
+                <a href="todos_exercicios.php" class="btn">🎯 Executar Todos</a>
+                <a href="README.md" class="btn">📖 Documentação</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

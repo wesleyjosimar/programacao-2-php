@@ -41,6 +41,16 @@ Este projeto contém exercícios práticos de Programação Orientada a Objetos 
 - **`README.md`** - Documentação completa da aula 2
 - **`discussao_coletiva_e_proximos_passos.md`** - Guia de discussão e próximos passos
 
+### **Aula 3 - POO Avançado: Herança e Polimorfismo** 🆕
+**Localização:** `Aula3/`
+- **`index.html`** - Interface web principal com todos os exercícios
+- **`indice.html`** - Navegação rápida e organizada
+- **`todos_exercicios.php`** - Executa todos os 10 exercícios simultaneamente
+- **`README.md`** - Documentação completa da aula 3
+- **10 Classes PHP** implementando conceitos avançados de POO
+- **10 Exercícios executáveis** com demonstrações práticas
+- **Interface web moderna** com design responsivo e interativo
+
 ## 🚀 Como Usar a Interface Web (Recomendado)
 
 ### **1. Iniciar o Servidor PHP:**
@@ -93,6 +103,16 @@ php exercicio3_livro.php
 - **Validação de dados** robusta
 - **Tratamento de exceções** com mensagens claras
 - **Interface web interativa** para visualização
+
+### **Aula 3** 🆕
+- **Herança** com classes base e derivadas
+- **Atributos protegidos** e acesso controlado
+- **Polimorfismo** com sobrescrita de métodos
+- **Encapsulamento avançado** com arrays privados
+- **Múltiplos níveis de acesso** (public, protected, private)
+- **Refatoração** e melhorias de código
+- **Padrões de projeto** (Singleton, Factory)
+- **Interface web completa** com 10 exercícios
 
 ## 🔧 Arquivos da Interface Web
 
@@ -171,7 +191,7 @@ Se encontrar algum problema:
 
 - ✅ **Aula 1** - Completada com exercícios básicos
 - ✅ **Aula 2** - Completada com POO e interface web
-- 🚧 **Aula 3** - Em planejamento (Herança e Polimorfismo)
+- ✅ **Aula 3** - Completada com 10 exercícios de POO avançado
 - 📋 **Documentação** - Atualizada e completa
 - 🌐 **Interface Web** - Funcionando e responsiva
 
@@ -182,6 +202,14 @@ Este projeto é parte do curso de Programação 2 e serve como material de estud
 ---
 
 ## 📅 Histórico de Atualizações
+
+### **Agosto 2025 - Aula 3** 🆕
+- ✅ Implementados 10 exercícios de POO avançado
+- ✅ Criada interface web completa e moderna
+- ✅ Demonstrados conceitos de Herança e Polimorfismo
+- ✅ Implementados padrões de projeto (Singleton, Factory)
+- ✅ Criada documentação técnica detalhada
+- ✅ Adicionada navegação rápida e organizada
 
 ### **Agosto 2025 - Aula 2**
 - ✅ Criada interface web interativa
