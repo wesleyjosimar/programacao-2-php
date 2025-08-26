@@ -203,7 +203,7 @@ class Pedido {
      * @return string Pedido formatado
      */
     public function exibirPedido() {
-        $saida = "<h4>📋 Pedido #{$this->id}</h4>";
+        $saida = "<h4>Pedido #{$this->id}</h4>";
         $saida .= "<p><strong>Cliente:</strong> {$this->cliente}</p>";
         $saida .= "<p><strong>Data:</strong> {$this->dataPedido}</p>";
         $saida .= "<p><strong>Status:</strong> {$this->status}</p>";

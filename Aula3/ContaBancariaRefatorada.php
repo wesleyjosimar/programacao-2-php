@@ -244,7 +244,7 @@ class ContaBancariaRefatorada {
      * @return string Extrato formatado
      */
     public function exibirExtrato() {
-        $extrato = "<h4>📋 Extrato da Conta {$this->numeroConta}</h4>";
+        $extrato = "<h4>Extrato da Conta {$this->numeroConta}</h4>";
         $extrato .= "<p><strong>Titular:</strong> {$this->titular}</p>";
         $extrato .= "<p><strong>Tipo:</strong> {$this->tipoConta}</p>";
         $extrato .= "<p><strong>Status:</strong> {$this->status}</p>";

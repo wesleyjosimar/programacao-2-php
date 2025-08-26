@@ -79,18 +79,18 @@ require_once 'Produto.php';
 <body>
     <div class="container">
         <div class="header">
-            <h1>🏷️ Exercício 1 - Classe Produto</h1>
+            <h1>Exercício 1 - Classe Produto</h1>
             <p>Atributos Públicos e Instanciação de Objetos</p>
         </div>
         
         <div class="content">
             <div class="explanation">
-                <h4>📚 Conceito Aplicado: Atributos Públicos</h4>
+                <h4>Conceito Aplicado: Atributos Públicos</h4>
                 <p>Atributos públicos permitem acesso direto de fora da classe, facilitando a manipulação dos dados, mas podem comprometer o encapsulamento. Este exercício demonstra como criar e acessar atributos públicos.</p>
             </div>
 
             <div class="result">
-                <h3>🔍 Resultado da Execução:</h3>
+                <h3>Resultado da Execução:</h3>
                 <?php
                 // Instanciando objetos da classe Produto
                 $produto1 = new Produto("Notebook Dell", 3500.00);
@@ -104,7 +104,7 @@ require_once 'Produto.php';
                 echo "<hr>";
                 
                 // Demonstração de acesso direto aos atributos públicos
-                echo "<h4>🎯 Acesso Direto aos Atributos Públicos:</h4>";
+                                    echo "<h4>Acesso Direto aos Atributos Públicos:</h4>";
                 echo "<p>Nome do Produto 1: <strong>" . $produto1->nome . "</strong></p>";
                 echo "<p>Preço do Produto 1: <strong>R$ " . number_format($produto1->preco, 2, ',', '.') . "</strong></p>";
                 
@@ -140,7 +140,7 @@ require_once 'Produto.php';
             </div>
 
             <div class="explanation">
-                <h4>🎯 Motivo da Implementação:</h4>
+                <h4>Motivo da Implementação:</h4>
                 <p><strong>Atributos Públicos:</strong> Foram implementados para demonstrar o conceito básico de POO onde os dados podem ser acessados e modificados diretamente. Isso facilita o aprendizado inicial, mas mostra a necessidade do encapsulamento nos próximos exercícios.</p>
                 <p><strong>Construtor:</strong> Permite inicializar objetos com valores específicos, demonstrando a reutilização de código.</p>
                 <p><strong>Métodos:</strong> Mostram como encapsular comportamentos mesmo com atributos públicos.</p>

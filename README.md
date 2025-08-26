@@ -1,6 +1,6 @@
-# 🚀 Programação 2 - PHP
+# Programação 2 - PHP
 
-## 🎯 Visão Geral do Projeto
+## Visão Geral do Projeto
 Este projeto contém exercícios práticos de Programação Orientada a Objetos (POO) em PHP, organizados por aulas e conceitos fundamentais. Inclui uma interface web interativa para visualização e execução dos exercícios.
 
 ## ✨ Novidades da Aula 2 (Agosto 2025)
@@ -13,14 +13,14 @@ Este projeto contém exercícios práticos de Programação Orientada a Objetos 
 - **Visualização dos resultados** formatados
 - **Compatível com mobile** e desktop
 
-### 📚 **Documentação Completa Adicionada**
+### **Documentação Completa Adicionada**
 - **`Aula2/discussao_coletiva_e_proximos_passos.md`** - Guia completo de discussão coletiva
 - **Erros comuns e boas práticas** com exemplos práticos
 - **Resumo dos conceitos** aprendidos
 - **Próximos passos** em POO (Herança e Polimorfismo)
 - **Leitura complementar** e recursos recomendados
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ### **Aula 1 - Introdução ao PHP**
 **Localização:** `aula1/`
@@ -51,7 +51,7 @@ Este projeto contém exercícios práticos de Programação Orientada a Objetos 
 - **10 Exercícios executáveis** com demonstrações práticas
 - **Interface web moderna** com design responsivo e interativo
 
-## 🚀 Como Usar a Interface Web (Recomendado)
+## Como Usar a Interface Web (Recomendado)
 
 ### **1. Iniciar o Servidor PHP:**
 ```bash
@@ -86,7 +86,7 @@ php exercicio2_aluno.php
 php exercicio3_livro.php
 ```
 
-## 🎓 Conceitos Abordados
+## Conceitos Abordados
 
 ### **Aula 1**
 - Sintaxe básica do PHP
@@ -121,7 +121,7 @@ php exercicio3_livro.php
 - **`start_server.bat`** - Script Windows para iniciar servidor
 - **`start_server.ps1`** - Script PowerShell para iniciar servidor
 
-## 📚 Documentação e Recursos
+## Documentação e Recursos
 
 ### **READMEs por Aula:**
 - **`aula1/README.md`** - Documentação da aula 1
@@ -147,7 +147,7 @@ php exercicio3_livro.php
 - **Seção de resultados** com scroll automático
 - **Tratamento de erros** com mensagens claras
 
-## 🚀 Próximos Passos
+## Próximos Passos
 
 ### **Conceitos Futuros:**
 - **Herança e Polimorfismo** - Hierarquias de classes
@@ -162,7 +162,7 @@ php exercicio3_livro.php
 - **Design Patterns** - Padrões de projeto
 - **PHP The Right Way** - Guias e tutoriais
 
-## 🛠️ Organização dos Projetos
+## Organização dos Projetos
 
 O projeto também contém outras organizações e versões:
 - **`Organizacao-Projetos-GitHub/`** - Projetos organizados para GitHub
@@ -178,7 +178,7 @@ O projeto também contém outras organizações e versões:
 6. **Leia a documentação** de discussão coletiva para consolidar o conhecimento
 7. **Tente criar suas próprias classes** baseadas nos exemplos
 
-## 🔍 Suporte e Solução de Problemas
+## Suporte e Solução de Problemas
 
 Se encontrar algum problema:
 1. **Verifique se o PHP está instalado:** `php --version`
@@ -187,7 +187,7 @@ Se encontrar algum problema:
 4. **Consulte os comentários** no código para entender cada parte
 5. **Verifique o README** específico de cada aula
 
-## 📊 Status do Projeto
+## Status do Projeto
 
 - ✅ **Aula 1** - Completada com exercícios básicos
 - ✅ **Aula 2** - Completada com POO e interface web
@@ -201,7 +201,7 @@ Este projeto é parte do curso de Programação 2 e serve como material de estud
 
 ---
 
-## 📅 Histórico de Atualizações
+## Histórico de Atualizações
 
 ### **Agosto 2025 - Aula 3** 🆕
 - ✅ Implementados 10 exercícios de POO avançado

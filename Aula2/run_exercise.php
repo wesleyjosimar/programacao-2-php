@@ -54,7 +54,7 @@ try {
     $output = strip_tags($output);
     
     // Adicionar informações sobre o arquivo executado
-    $fileInfo = "📁 Arquivo executado: {$filename}\n";
+            $fileInfo = "Arquivo executado: {$filename}\n";
     $fileInfo .= "⏰ Data/Hora: " . date('d/m/Y H:i:s') . "\n";
     $fileInfo .= "🔧 PHP Version: " . PHP_VERSION . "\n";
     $fileInfo .= "=" . str_repeat("=", 50) . "\n\n";

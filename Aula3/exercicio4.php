@@ -103,18 +103,18 @@ require_once 'Funcionario.php';
 <body>
     <div class="container">
         <div class="header">
-            <h1>👥 Exercício 4 - Herança</h1>
+            <h1>Exercício 4 - Herança</h1>
             <p>Funcionario e Gerente com Atributo Protegido</p>
         </div>
         
         <div class="content">
             <div class="explanation">
-                <h4>📚 Conceito Aplicado: Herança e Atributos Protegidos</h4>
+                <h4>Conceito Aplicado: Herança e Atributos Protegidos</h4>
                 <p>A herança permite que uma classe (Gerente) herde características de outra (Funcionario). Atributos protegidos são acessíveis tanto na classe pai quanto nas subclasses, permitindo reutilização de código e extensão de funcionalidades.</p>
             </div>
 
             <div class="result">
-                <h3>🔍 Resultado da Execução:</h3>
+                <h3>Resultado da Execução:</h3>
                 <?php
                 try {
                     // Criando funcionários e gerentes
@@ -149,7 +149,7 @@ require_once 'Funcionario.php';
                     echo "<hr>";
                     
                     // Demonstração de métodos específicos do gerente
-                    echo "<h4>🎯 Métodos Específicos do Gerente:</h4>";
+                    echo "<h4>Métodos Específicos do Gerente:</h4>";
                     echo "<div class='success'>";
                     echo "<p><strong>Departamento do Gerente 1:</strong> " . $gerente1->getDepartamento() . "</p>";
                     echo "<p><strong>Bônus de Gerência:</strong> R$ " . number_format($gerente1->getBonusGerencia(), 2, ',', '.') . "</p>";
@@ -227,7 +227,7 @@ class Gerente extends Funcionario {
             </div>
 
             <div class="explanation">
-                <h4>🎯 Motivo da Implementação:</h4>
+                <h4>Motivo da Implementação:</h4>
                 <p><strong>Atributo Protegido:</strong> O salário é protegido para permitir que subclasses (Gerente) possam acessá-lo e modificá-lo, mas ainda mantendo o encapsulamento em relação ao código externo.</p>
                 <p><strong>Herança:</strong> A classe Gerente herda todos os atributos e métodos públicos/protegidos de Funcionario, demonstrando reutilização de código.</p>
                 <p><strong>Sobrescrita de Métodos:</strong> O método setSalario() é sobrescrito na subclasse para adicionar funcionalidade específica (cálculo do bônus), demonstrando polimorfismo.</p>

@@ -103,18 +103,18 @@ require_once 'ContaBancaria.php';
 <body>
     <div class="container">
         <div class="header">
-            <h1>🏦 Exercício 3 - ContaBancaria</h1>
+            <h1>Exercício 3 - ContaBancaria</h1>
             <p>Encapsulamento com Operações Bancárias</p>
         </div>
         
         <div class="content">
             <div class="explanation">
-                <h4>📚 Conceito Aplicado: Encapsulamento em Operações Bancárias</h4>
+                <h4>Conceito Aplicado: Encapsulamento em Operações Bancárias</h4>
                 <p>A classe ContaBancaria demonstra como o encapsulamento protege dados sensíveis como saldo e histórico, permitindo apenas operações controladas através de métodos públicos como depositar() e sacar().</p>
             </div>
 
             <div class="result">
-                <h3>🔍 Resultado da Execução:</h3>
+                <h3>Resultado da Execução:</h3>
                 <?php
                 try {
                     // Criando contas bancárias
@@ -189,7 +189,7 @@ require_once 'ContaBancaria.php';
                     echo "<hr>";
                     
                     // Exibindo extratos
-                    echo "<h4>📋 Extratos das Contas:</h4>";
+                    echo "<h4>Extratos das Contas:</h4>";
                     echo "<div class='extrato'>";
                     echo $contaJoao->exibirExtrato();
                     echo "</div>";
@@ -237,7 +237,7 @@ require_once 'ContaBancaria.php';
             </div>
 
             <div class="explanation">
-                <h4>🎯 Motivo da Implementação:</h4>
+                <h4>Motivo da Implementação:</h4>
                 <p><strong>Atributos Privados:</strong> Saldo e histórico são privados para proteger a integridade dos dados bancários, impedindo manipulação direta.</p>
                 <p><strong>Métodos de Operação:</strong> depositar() e sacar() encapsulam a lógica de negócio, garantindo que apenas operações válidas sejam realizadas.</p>
                 <p><strong>Validações:</strong> Implementadas para prevenir saques maiores que o saldo e depósitos negativos.</p>

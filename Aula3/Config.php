@@ -71,7 +71,7 @@ class ConfigLeitura extends Config {
      * @return string Parâmetros formatados
      */
     public function exibirParametros() {
-        $saida = "<h4>📋 Parâmetros de Configuração (Somente Leitura)</h4>";
+        $saida = "<h4>Parâmetros de Configuração (Somente Leitura)</h4>";
         $saida .= "<p><strong>Total de parâmetros:</strong> {$this->getNumeroParametros()}</p>";
         
         if (empty($this->parametros)) {
@@ -185,7 +185,7 @@ class ConfigModificacao extends Config {
      * @return string Parâmetros formatados
      */
     public function exibirParametros() {
-        $saida = "<h4>⚙️ Parâmetros de Configuração (Leitura e Modificação)</h4>";
+        $saida = "<h4>Parâmetros de Configuração (Leitura e Modificação)</h4>";
         $saida .= "<p><strong>Total de parâmetros:</strong> {$this->getNumeroParametros()}</p>";
         
         if (empty($this->parametros)) {

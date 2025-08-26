@@ -95,18 +95,18 @@ require_once 'ProdutoEncapsulado.php';
 <body>
     <div class="container">
         <div class="header">
-            <h1>🔒 Exercício 2 - Encapsulamento</h1>
+            <h1>Exercício 2 - Encapsulamento</h1>
             <p>Atributos Privados e Métodos Get/Set</p>
         </div>
         
         <div class="content">
             <div class="explanation">
-                <h4>📚 Conceito Aplicado: Encapsulamento</h4>
+                <h4>Conceito Aplicado: Encapsulamento</h4>
                 <p>O encapsulamento protege os dados da classe através de modificadores de acesso. Atributos privados só podem ser acessados através de métodos públicos (getters/setters), permitindo validação e controle de acesso.</p>
             </div>
 
             <div class="result">
-                <h3>🔍 Resultado da Execução:</h3>
+                <h3>Resultado da Execução:</h3>
                 <?php
                 try {
                     // Instanciando objetos da classe ProdutoEncapsulado
@@ -121,14 +121,14 @@ require_once 'ProdutoEncapsulado.php';
                     echo "<hr>";
                     
                     // Demonstração de acesso através de getters
-                    echo "<h4>🎯 Acesso através de Getters:</h4>";
+                    echo "<h4>Acesso através de Getters:</h4>";
                     echo "<p>Nome do Produto 1: <strong>" . $produto1->nome . "</strong> (público)</p>";
                     echo "<p>Preço do Produto 1: <strong>R$ " . number_format($produto1->getPreco(), 2, ',', '.') . "</strong> (via getter)</p>";
                     
                     echo "<hr>";
                     
                     // Demonstração de modificação através de setters
-                    echo "<h4>✏️ Modificação através de Setters:</h4>";
+                    echo "<h4>Modificação através de Setters:</h4>";
                     if ($produto1->setPreco(1199.99)) {
                         echo "<div class='success'>";
                         echo "<p>Preço do Produto 1 alterado para: <strong>R$ " . number_format($produto1->getPreco(), 2, ',', '.') . "</strong></p>";
@@ -138,7 +138,7 @@ require_once 'ProdutoEncapsulado.php';
                     echo "<hr>";
                     
                     // Demonstração de validação
-                    echo "<h4>⚠️ Teste de Validação:</h4>";
+                    echo "<h4>Teste de Validação:</h4>";
                     try {
                         $produto1->setPreco(-100); // Tentativa de definir preço negativo
                     } catch (InvalidArgumentException $e) {
@@ -194,7 +194,7 @@ require_once 'ProdutoEncapsulado.php';
             </div>
 
             <div class="explanation">
-                <h4>🎯 Motivo da Implementação:</h4>
+                <h4>Motivo da Implementação:</h4>
                 <p><strong>Atributo Privado:</strong> O preço foi tornado privado para proteger a integridade dos dados, impedindo que valores inválidos sejam atribuídos diretamente.</p>
                 <p><strong>Métodos Get/Set:</strong> Permitem acesso controlado aos dados, incluindo validação no setter para garantir que apenas valores válidos sejam aceitos.</p>
                 <p><strong>Validação:</strong> Implementada para demonstrar como o encapsulamento pode prevenir erros e manter a consistência dos dados.</p>
