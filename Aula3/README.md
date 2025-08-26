@@ -172,8 +172,8 @@ Após dominar estes exercícios, você pode:
 
 **Aluno da 4ª Fase - Ciência da Computação**  
 **Disciplina:** Programação 2 - PHP  
-**Universidade:** [Nome da Universidade]  
-**Ano:** 2024
+**Universidade:** Unoesc Videira
+**Ano:** 2025
 
 ## 📝 Licença
 
