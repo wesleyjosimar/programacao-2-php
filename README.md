@@ -3,9 +3,9 @@
 ## Visão Geral do Projeto
 Este projeto contém exercícios práticos de Programação Orientada a Objetos (POO) em PHP, organizados por aulas e conceitos fundamentais. Inclui uma interface web interativa para visualização e execução dos exercícios.
 
-## ✨ Novidades da Aula 2 (Agosto 2025)
+## Novidades da Aula 2 (Agosto 2025)
 
-### 🌐 **Interface Web Interativa Criada!**
+### **Interface Web Interativa Criada!**
 - **Arquivo:** `Aula2/index.html`
 - **Design moderno e responsivo** com gradientes e animações
 - **Cards visuais** para cada exercício
@@ -29,7 +29,7 @@ Este projeto contém exercícios práticos de Programação Orientada a Objetos 
 - **03_explicacao_simples.php** - Explicação de conceitos básicos
 - **README.md** - Documentação da aula 1
 
-### **Aula 2 - Programação Orientada a Objetos** 🆕
+### **Aula 2 - Programação Orientada a Objetos**
 **Localização:** `Aula2/`
 - **`index.html`** - Interface web principal interativa
 - **`run_exercise.php`** - Script para executar exercícios
@@ -41,7 +41,7 @@ Este projeto contém exercícios práticos de Programação Orientada a Objetos 
 - **`README.md`** - Documentação completa da aula 2
 - **`discussao_coletiva_e_proximos_passos.md`** - Guia de discussão e próximos passos
 
-### **Aula 3 - POO Avançado: Herança e Polimorfismo** 🆕
+### **Aula 3 - POO Avançado: Herança e Polimorfismo**
 **Localização:** `Aula3/`
 - **`index.html`** - Interface web principal com todos os exercícios
 - **`indice.html`** - Navegação rápida e organizada
@@ -67,7 +67,7 @@ php -S localhost:8000
 - Veja os resultados formatados na tela
 - Teste as validações e tratamento de erros
 
-## 💻 Como Executar via Terminal
+## Como Executar via Terminal
 
 ```bash
 # Navegar para a pasta do projeto
@@ -94,7 +94,7 @@ php exercicio3_livro.php
 - Funções básicas
 - Arrays e manipulação de dados
 
-### **Aula 2** 🆕
+### **Aula 2**
 - **Classes e objetos** com instanciação
 - **Construtores** com parâmetros
 - **Modificadores de acesso** (public, private)
@@ -104,7 +104,7 @@ php exercicio3_livro.php
 - **Tratamento de exceções** com mensagens claras
 - **Interface web interativa** para visualização
 
-### **Aula 3** 🆕
+### **Aula 3**
 - **Herança** com classes base e derivadas
 - **Atributos protegidos** e acesso controlado
 - **Polimorfismo** com sobrescrita de métodos
@@ -114,7 +114,7 @@ php exercicio3_livro.php
 - **Padrões de projeto** (Singleton, Factory)
 - **Interface web completa** com 10 exercícios
 
-## 🔧 Arquivos da Interface Web
+## Arquivos da Interface Web
 
 - **`index.html`** - Interface principal com design moderno
 - **`run_exercise.php`** - Script para executar exercícios
@@ -136,7 +136,7 @@ php exercicio3_livro.php
 5. **Validação de Dados** - Verificação e exceções
 6. **Encapsulamento** - Proteção de dados
 
-## 🎨 Características da Interface Web
+## Características da Interface Web
 
 - **Design responsivo** que funciona em todos os dispositivos
 - **Cards visuais** atrativos para cada exercício
@@ -168,7 +168,7 @@ O projeto também contém outras organizações e versões:
 - **`Organizacao-Projetos-GitHub/`** - Projetos organizados para GitHub
 - **`aula1/`** - Versão alternativa da aula 1
 
-## 💡 Dicas de Estudo
+## Dicas de Estudo
 
 1. **Use a interface web** para visualizar os resultados de forma mais clara
 2. **Execute cada exercício** e observe a saída
@@ -195,7 +195,7 @@ Se encontrar algum problema:
 - 📋 **Documentação** - Atualizada e completa
 - 🌐 **Interface Web** - Funcionando e responsiva
 
-## 🤝 Contribuições
+## Contribuições
 
 Este projeto é parte do curso de Programação 2 e serve como material de estudo e referência para os conceitos de POO em PHP. Contribuições e sugestões são bem-vindas!
 
@@ -203,7 +203,7 @@ Este projeto é parte do curso de Programação 2 e serve como material de estud
 
 ## Histórico de Atualizações
 
-### **Agosto 2025 - Aula 3** 🆕
+### **Agosto 2025 - Aula 3**
 - ✅ Implementados 10 exercícios de POO avançado
 - ✅ Criada interface web completa e moderna
 - ✅ Demonstrados conceitos de Herança e Polimorfismo
@@ -225,5 +225,5 @@ Este projeto é parte do curso de Programação 2 e serve como material de estud
 
 ---
 
-*Projeto criado e mantido para o curso de Programação 2 - PHP*
+*Projeto para o curso de Programação 2 - PHP*
 *Última atualização: Agosto 2025*
