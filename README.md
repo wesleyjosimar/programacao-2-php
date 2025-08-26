@@ -48,7 +48,8 @@ Este projeto contém exercícios práticos de Programação Orientada a Objetos 
 - **`todos_exercicios.php`** - Executa todos os 10 exercícios simultaneamente
 - **`README.md`** - Documentação completa da aula 3
 - **10 Classes PHP** implementando conceitos avançados de POO
-- **10 Exercícios executáveis** com demonstrações práticas
+- **4 Exercícios executáveis** com demonstrações práticas (1-4)
+- **6 Classes adicionais** para estudo e análise (5-10)
 - **Interface web moderna** com design responsivo e interativo
 
 ## Como Usar a Interface Web (Recomendado)
@@ -112,7 +113,7 @@ php exercicio3_livro.php
 - **Múltiplos níveis de acesso** (public, protected, private)
 - **Refatoração** e melhorias de código
 - **Padrões de projeto** (Singleton, Factory)
-- **Interface web completa** com 10 exercícios
+- **Interface web completa** com 4 exercícios executáveis
 
 ## Arquivos da Interface Web
 

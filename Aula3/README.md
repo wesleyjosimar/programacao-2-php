@@ -123,17 +123,11 @@ Aula3/
 ├── Funcionario.php                    # Classes do Exercício 4
 ├── exercicio4.php                     # Execução do Exercício 4
 ├── Usuario.php                        # Classe do Exercício 5
-├── exercicio5.php                     # Execução do Exercício 5
 ├── Config.php                         # Classes do Exercício 6
-├── exercicio6.php                     # Execução do Exercício 6
 ├── Pedido.php                         # Classe do Exercício 7
-├── exercicio7.php                     # Execução do Exercício 7
 ├── Cliente.php                        # Classes do Exercício 8
-├── exercicio8.php                     # Execução do Exercício 8
 ├── ContaBancariaRefatorada.php        # Classe do Exercício 9
-├── exercicio9.php                     # Execução do Exercício 9
-├── ConexaoBD.php                      # Classe do Exercício 10
-└── exercicio10.php                    # Execução do Exercício 10
+└── ConexaoBD.php                      # Classe do Exercício 10
 ```
 
 ## 🔧 Requisitos Técnicos
@@ -158,12 +152,12 @@ Aula3/
 - Atributos e métodos básicos
 - Encapsulamento simples
 
-### **Intermediário (Exercícios 4-7)**
+### **Intermediário (Exercícios 4)**
 - Herança e polimorfismo
 - Arrays e estruturas de dados
 - Validações e tratamento de erros
 
-### **Avançado (Exercícios 8-10)**
+### **Avançado (Classes 5-10)**
 - Múltiplos níveis de acesso
 - Refatoração e melhorias
 - Padrões de projeto complexos
