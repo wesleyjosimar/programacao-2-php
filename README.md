@@ -45,7 +45,7 @@ Este projeto contém exercícios práticos de Programação Orientada a Objetos 
 **Localização:** `Aula3/`
 - **`index.html`** - Interface web principal com todos os exercícios
 - **`indice.html`** - Navegação rápida e organizada
-- **`todos_exercicios.php`** - Executa todos os 10 exercícios simultaneamente
+
 - **`README.md`** - Documentação completa da aula 3
 - **10 Classes PHP** implementando conceitos avançados de POO
 - **4 Exercícios executáveis** com demonstrações práticas (1-4)

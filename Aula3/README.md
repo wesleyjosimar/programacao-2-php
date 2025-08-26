@@ -97,10 +97,7 @@ Esta aula apresenta **10 exercícios práticos** de Programação Orientada a Ob
 2. Clique em qualquer exercício para executá-lo
 3. Cada exercício tem sua própria página com demonstração
 
-### **Opção 2: Executar Todos de Uma Vez**
-1. Acesse `todos_exercicios.php`
-2. Veja todos os exercícios executando simultaneamente
-3. Compare os resultados e conceitos
+
 
 ### **Opção 3: Ver Código das Classes**
 1. Cada exercício tem um botão "Ver Código"
@@ -113,7 +110,6 @@ Esta aula apresenta **10 exercícios práticos** de Programação Orientada a Ob
 Aula3/
 ├── index.html                          # Menu principal
 ├── README.md                           # Este arquivo
-├── todos_exercicios.php               # Executa todos os exercícios
 ├── Produto.php                        # Classe do Exercício 1
 ├── exercicio1.php                     # Execução do Exercício 1
 ├── ProdutoEncapsulado.php             # Classe do Exercício 2
