@@ -1,13 +1,5 @@
 <?php
-/**
- * Todos os Exercícios - Aula 3
- * Executa todos os exercícios de POO de uma vez
- * 
- * @author Aluno 4ª Fase - Ciência da Computação
- * @version 1.0
- */
-
-// Incluir todas as classes
+// Incluir todas as classes necessárias
 require_once 'Produto.php';
 require_once 'ProdutoEncapsulado.php';
 require_once 'ContaBancaria.php';
@@ -18,423 +10,452 @@ require_once 'Pedido.php';
 require_once 'Cliente.php';
 require_once 'ContaBancariaRefatorada.php';
 require_once 'ConexaoBD.php';
-
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todos os Exercícios - POO Aula 3</title>
+    <title>Todos os Exercícios - Aula 3</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            background: #f5f5f5;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .header {
-            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            background: #2c3e50;
             color: white;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
         }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
         .content {
-            padding: 30px;
-        }
-        .exercise-section {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
             padding: 20px;
-            margin: 20px 0;
         }
-        .exercise-section h3 {
+        .exercise {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .exercise h2 {
             color: #2c3e50;
+            margin-top: 0;
             border-bottom: 2px solid #e9ecef;
             padding-bottom: 10px;
-            margin-top: 0;
+        }
+        .exercise h3 {
+            color: #495057;
+            margin-top: 15px;
         }
         .result {
-            background: white;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 5px;
             padding: 15px;
             margin: 15px 0;
         }
-        .success {
-            background: #d4edda;
-            border: 1px solid #c3e6cb;
-            color: #155724;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-        }
-        .info {
-            background: #d1ecf1;
-            border: 1px solid #bee5eb;
-            color: #0c5460;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-        }
-        .warning {
+        .justification {
             background: #fff3cd;
             border: 1px solid #ffeaa7;
-            color: #856404;
+            border-radius: 5px;
             padding: 15px;
-            border-radius: 8px;
             margin: 15px 0;
         }
-        .btn {
+        .justification h4 {
+            color: #856404;
+            margin-top: 0;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 15px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+            color: #6c757d;
+        }
+        .nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav a {
             display: inline-block;
             background: #007bff;
             color: white;
-            padding: 10px 20px;
+            padding: 8px 16px;
             text-decoration: none;
-            border-radius: 5px;
-            margin: 10px 5px;
+            border-radius: 4px;
+            margin: 3px;
         }
-        .summary {
-            background: #e3f2fd;
-            border: 1px solid #bbdefb;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .summary h4 {
-            color: #1976d2;
-            margin-top: 0;
+        .nav a:hover {
+            background: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🚀 Todos os Exercícios de POO</h1>
-            <p>Aula 3 - Programação Orientada a Objetos | 4ª Fase - Ciência da Computação</p>
+            <h1>Todos os Exercícios - Aula 3</h1>
+            <p>Programação Orientada a Objetos | 4ª Fase - Ciência da Computação</p>
         </div>
-        
+
+        <div class="nav">
+            <a href="index.html">← Voltar ao Menu</a>
+            <a href="CRITERIOS_AVALIACAO.md">Ver Critérios</a>
+        </div>
+
         <div class="content">
-            <div class="summary">
-                <h4>📚 Resumo dos Conceitos Implementados</h4>
-                <p>Esta demonstração inclui todos os 10 exercícios de POO, cobrindo os principais conceitos: <strong>Encapsulamento</strong>, <strong>Herança</strong>, <strong>Polimorfismo</strong> e <strong>Abstração</strong>.</p>
-            </div>
 
-            <!-- Exercício 1: Classe Produto -->
-            <div class="exercise-section">
-                <h3>🏷️ Exercício 1: Classe Produto - Atributos Públicos</h3>
+            <!-- EXERCÍCIO 1 -->
+            <div class="exercise">
+                <h2>Exercício 1: Classe Produto - Atributos Públicos</h2>
+                
+                <h3>Demonstração:</h3>
                 <div class="result">
                     <?php
-                    try {
-                        $produto1 = new Produto("Notebook Dell", 3500.00);
-                        $produto2 = new Produto("Mouse Gamer", 89.90);
-                        
-                        echo "<div class='success'>";
-                        echo "<p><strong>Produto 1:</strong> " . $produto1->exibirInfo() . "</p>";
-                        echo "<p><strong>Produto 2:</strong> " . $produto2->exibirInfo() . "</p>";
-                        echo "<p><strong>Desconto 15% Produto 2:</strong> R$ " . number_format($produto2->calcularDesconto(15), 2, ',', '.') . "</p>";
-                        echo "</div>";
-                        
-                        echo "<p><strong>Conceito:</strong> Atributos públicos permitem acesso direto aos dados.</p>";
-                        
-                    } catch (Exception $e) {
-                        echo "<div class='warning'>Erro: " . $e->getMessage() . "</div>";
-                    }
+                    $produto1 = new Produto("Notebook", 2500.00);
+                    $produto2 = new Produto("Mouse", 45.50);
+                    
+                    echo "<strong>Produto 1:</strong><br>";
+                    $produto1->exibirInfo();
+                    echo "<br><strong>Produto 2:</strong><br>";
+                    $produto2->exibirInfo();
+                    
+                    echo "<br><strong>Desconto de 10% no Notebook:</strong><br>";
+                    $produto1->calcularDesconto(10);
                     ?>
+                </div>
+
+                <div class="justification">
+                    <h4>Justificativa da Implementação:</h4>
+                    <p>Este exercício demonstra o nível mais básico de POO, onde todos os atributos são públicos para facilitar o acesso direto. É intencionalmente simples para estabelecer a base conceitual.</p>
                 </div>
             </div>
 
-            <!-- Exercício 2: Classe Produto com Encapsulamento -->
-            <div class="exercise-section">
-                <h3>🔒 Exercício 2: Classe Produto com Encapsulamento</h3>
+            <!-- EXERCÍCIO 2 -->
+            <div class="exercise">
+                <h2>Exercício 2: Classe Produto - Encapsulamento</h2>
+                
+                <h3>Demonstração:</h3>
+                <div class="result">
+                    <?php
+                    $produtoEnc = new ProdutoEncapsulado("Smartphone", 1200.00);
+                    
+                    echo "<strong>Produto Original:</strong><br>";
+                    $produtoEnc->exibirInfo();
+                    
+                    echo "<br><strong>Alterando preço para 1100.00:</strong><br>";
+                    $produtoEnc->setPreco(1100.00);
+                    $produtoEnc->exibirInfo();
+                    
+                    echo "<br><strong>Tentando definir preço negativo:</strong><br>";
+                    $produtoEnc->setPreco(-100);
+                    $produtoEnc->exibirInfo();
+                    ?>
+                </div>
+
+                <div class="justification">
+                    <h4>Justificativa da Implementação:</h4>
+                    <p>A refatoração demonstra encapsulamento: o preço agora é privado e só pode ser modificado através de um setter que valida os dados. Isso protege a integridade dos dados.</p>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 3 -->
+            <div class="exercise">
+                <h2>Exercício 3: Classe ContaBancaria - Métodos de Operação</h2>
+                
+                <h3>Demonstração:</h3>
+                <div class="result">
+                    <?php
+                    $conta = new ContaBancaria("12345", "João Silva", 1000.00);
+                    
+                    echo "<strong>Conta Criada:</strong><br>";
+                    echo "Número: " . $conta->getNumeroConta() . "<br>";
+                    echo "Titular: " . $conta->getTitular() . "<br>";
+                    echo "Saldo: R$ " . number_format($conta->getSaldo(), 2, ',', '.') . "<br>";
+                    
+                    echo "<br><strong>Depositando R$ 500.00:</strong><br>";
+                    $conta->depositar(500.00);
+                    echo "Saldo: R$ " . number_format($conta->getSaldo(), 2, ',', '.') . "<br>";
+                    
+                    echo "<br><strong>Sacando R$ 200.00:</strong><br>";
+                    $conta->sacar(200.00);
+                    echo "Saldo: R$ " . number_format($conta->getSaldo(), 2, ',', '.') . "<br>";
+                    
+                    echo "<br><strong>Tentando sacar R$ 2000.00 (saldo insuficiente):</strong><br>";
+                    $conta->sacar(2000.00);
+                    echo "Saldo: R$ " . number_format($conta->getSaldo(), 2, ',', '.') . "<br>";
+                    ?>
+                </div>
+
+                <div class="justification">
+                    <h4>Justificativa da Implementação:</h4>
+                    <p>Os atributos são privados para proteger informações sensíveis da conta. Apenas métodos públicos podem modificar o saldo, garantindo controle total sobre as operações.</p>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 4 -->
+            <div class="exercise">
+                <h2>Exercício 4: Herança - Funcionario e Gerente</h2>
+                
+                <h3>Demonstração:</h3>
+                <div class="result">
+                    <?php
+                    $funcionario = new Funcionario("Maria Santos", 3000.00, "Desenvolvedora");
+                    $gerente = new Gerente("Carlos Oliveira", 5000.00, "TI");
+                    
+                    echo "<strong>Funcionário:</strong><br>";
+                    $funcionario->exibirInfo();
+                    
+                    echo "<br><strong>Gerente:</strong><br>";
+                    $gerente->exibirInfo();
+                    
+                    echo "<br><strong>Alterando salário do gerente para R$ 5500.00:</strong><br>";
+                    $gerente->setSalario(5500.00);
+                    $gerente->exibirInfo();
+                    ?>
+                </div>
+
+                <div class="justification">
+                    <h4>Justificativa da Implementação:</h4>
+                    <p>O uso de atributos protegidos permite que subclasses acessem e modifiquem dados da classe base, enquanto mantém o encapsulamento em relação ao mundo externo.</p>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 5 -->
+            <div class="exercise">
+                <h2>Exercício 5: Classe Usuario - Verificação de Senha</h2>
+                
+                <h3>Demonstração:</h3>
+                <div class="result">
+                    <?php
+                    $usuario = new Usuario("admin", "senha123");
+                    
+                    echo "<strong>Usuário Criado:</strong><br>";
+                    echo "Login: " . $usuario->getLogin() . "<br>";
+                    
+                    echo "<br><strong>Verificando senha correta:</strong><br>";
+                    if ($usuario->verificarSenha("senha123")) {
+                        echo "✓ Senha correta!<br>";
+                    } else {
+                        echo "✗ Senha incorreta!<br>";
+                    }
+                    
+                    echo "<br><strong>Verificando senha incorreta:</strong><br>";
+                    if ($usuario->verificarSenha("senha456")) {
+                        echo "✓ Senha correta!<br>";
+                    } else {
+                        echo "✗ Senha incorreta!<br>";
+                    }
+                    ?>
+                </div>
+
+                <div class="justification">
+                    <h4>Justificativa da Implementação:</h4>
+                    <p>A senha é privada e nunca exposta. O hash garante que mesmo que o objeto seja serializado, a senha original não pode ser recuperada.</p>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 6 -->
+            <div class="exercise">
+                <h2>Exercício 6: Herança - Config e Subclasses</h2>
+                
+                <h3>Demonstração:</h3>
+                <div class="result">
+                    <?php
+                    $config = new Config();
+                    $config->adicionarParametro("host", "localhost");
+                    $config->adicionarParametro("porta", "3306");
+                    $config->adicionarParametro("usuario", "root");
+                    
+                    $leitor = new ConfigLeitura();
+                    $modificador = new ConfigModificacao();
+                    $avancada = new ConfigAvancada();
+                    
+                    echo "<strong>Configuração Base:</strong><br>";
+                    $config->listarParametros();
+                    
+                    echo "<br><strong>Leitor - Apenas Visualização:</strong><br>";
+                    $leitor->listarParametros();
+                    
+                    echo "<br><strong>Modificador - Adicionando parâmetro:</strong><br>";
+                    $modificador->adicionarParametro("senha", "123456");
+                    $modificador->listarParametros();
+                    
+                    echo "<br><strong>Avançada - Contando parâmetros:</strong><br>";
+                    echo "Total de parâmetros: " . $avancada->contarParametros() . "<br>";
+                    ?>
+                </div>
+
+                <div class="justification">
+                    <h4>Justificativa da Implementação:</h4>
+                    <p>Cada subclasse tem responsabilidades específicas: leitura, modificação ou operações avançadas. Os atributos protegidos permitem que todas acessem os parâmetros base.</p>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 7 -->
+            <div class="exercise">
+                <h2>Exercício 7: Classe Pedido - Gerenciamento de Array</h2>
+                
+                <h3>Demonstração:</h3>
+                <div class="result">
+                    <?php
+                    $pedido = new Pedido("PED001");
+                    
+                    echo "<strong>Pedido Criado:</strong><br>";
+                    echo "Número: " . $pedido->getNumero() . "<br>";
+                    
+                    echo "<br><strong>Adicionando itens:</strong><br>";
+                    $pedido->inserirItem("Produto A", 2, 25.00);
+                    $pedido->inserirItem("Produto B", 1, 50.00);
+                    $pedido->inserirItem("Produto C", 3, 15.00);
+                    
+                    echo "<br><strong>Listando itens:</strong><br>";
+                    $pedido->listarItens();
+                    
+                    echo "<br><strong>Removendo item 'Produto B':</strong><br>";
+                    $pedido->removerItem("Produto B");
+                    $pedido->listarItens();
+                    
+                    echo "<br><strong>Total do pedido:</strong><br>";
+                    echo "R$ " . number_format($pedido->calcularTotal(), 2, ',', '.') . "<br>";
+                    ?>
+                </div>
+
+                <div class="justification">
+                    <h4>Justificativa da Implementação:</h4>
+                    <p>O array de itens é privado para evitar modificações diretas. Apenas métodos específicos podem alterar a estrutura, garantindo consistência dos dados.</p>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 8 -->
+            <div class="exercise">
+                <h2>Exercício 8: Classe Cliente - Diferentes Níveis de Acesso</h2>
+                
+                <h3>Demonstração:</h3>
+                <div class="result">
+                    <?php
+                    $cliente = new Cliente("Ana Silva", "123.456.789-00", "(11) 99999-9999");
+                    $clienteVip = new ClienteVip("João Vip", "987.654.321-00", "(11) 88888-8888", "Platinum");
+                    
+                    echo "<strong>Cliente Normal:</strong><br>";
+                    echo "Nome: " . $cliente->nome . "<br>";
+                    echo "CPF: " . $cliente->getCpf() . "<br>";
+                    echo "Telefone: " . $cliente->getTelefone() . "<br>";
+                    
+                    echo "<br><strong>Cliente VIP:</strong><br>";
+                    echo "Nome: " . $clienteVip->nome . "<br>";
+                    echo "CPF: " . $clienteVip->getCpf() . "<br>";
+                    echo "Telefone: " . $clienteVip->getTelefone() . "<br>";
+                    echo "Categoria: " . $clienteVip->getCategoria() . "<br>";
+                    
+                    echo "<br><strong>Alterando telefone do cliente VIP:</strong><br>";
+                    $clienteVip->setTelefone("(11) 77777-7777");
+                    echo "Novo telefone: " . $clienteVip->getTelefone() . "<br>";
+                    ?>
+                </div>
+
+                <div class="justification">
+                    <h4>Justificativa da Implementação:</h4>
+                    <p>Cada nível de visibilidade tem um propósito: público para acesso universal, protegido para herança, privado para encapsulamento total. A subclasse demonstra acesso a membros protegidos.</p>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 9 -->
+            <div class="exercise">
+                <h2>Exercício 9: Refatoração - ContaBancaria com Validação</h2>
+                
+                <h3>Demonstração:</h3>
+                <div class="result">
+                    <?php
+                    $contaRef = new ContaBancariaRefatorada("67890", "Pedro Santos", 5000.00);
+                    
+                    echo "<strong>Conta Criada:</strong><br>";
+                    echo "Número: " . $contaRef->getNumeroConta() . "<br>";
+                    echo "Titular: " . $contaRef->getTitular() . "<br>";
+                    echo "Saldo: R$ " . number_format($contaRef->getSaldo(), 2, ',', '.') . "<br>";
+                    
+                    echo "<br><strong>Depositando R$ 1000.00:</strong><br>";
+                    $contaRef->depositar(1000.00);
+                    echo "Saldo: R$ " . number_format($contaRef->getSaldo(), 2, ',', '.') . "<br>";
+                    
+                    echo "<br><strong>Sacando R$ 500.00 (válido):</strong><br>";
+                    $contaRef->sacar(500.00);
+                    echo "Saldo: R$ " . number_format($contaRef->getSaldo(), 2, ',', '.') . "<br>";
+                    
+                    echo "<br><strong>Tentando sacar R$ 100.00 (múltiplo inválido):</strong><br>";
+                    $contaRef->sacar(100.00);
+                    echo "Saldo: R$ " . number_format($contaRef->getSaldo(), 2, ',', '.') . "<br>";
+                    
+                    echo "<br><strong>Tentando sacar R$ 10000.00 (saldo insuficiente):</strong><br>";
+                    $contaRef->sacar(10000.00);
+                    echo "Saldo: R$ " . number_format($contaRef->getSaldo(), 2, ',', '.') . "<br>";
+                    ?>
+                </div>
+
+                <div class="justification">
+                    <h4>Justificativa da Implementação:</h4>
+                    <p>A refatoração adiciona validações robustas que simulam regras bancárias reais. O método sacar agora verifica múltiplas condições antes de permitir a operação.</p>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 10 -->
+            <div class="exercise">
+                <h2>Exercício 10: Classe ConexaoBD - Encapsulamento de Conexão</h2>
+                
+                <h3>Demonstração:</h3>
                 <div class="result">
                     <?php
                     try {
-                        $produtoEncapsulado = new ProdutoEncapsulado("Smartphone", 1299.99);
+                        $conexao = new ConexaoBD();
                         
-                        echo "<div class='success'>";
-                        echo "<p><strong>Produto:</strong> " . $produtoEncapsulado->exibirInfo() . "</p>";
-                        echo "<p><strong>Preço via getter:</strong> R$ " . number_format($produtoEncapsulado->getPreco(), 2, ',', '.') . "</p>";
-                        echo "</div>";
+                        echo "<strong>Testando conexão com banco de dados:</strong><br>";
                         
-                        if ($produtoEncapsulado->aplicarDesconto(10)) {
-                            echo "<div class='info'>";
-                            echo "<p>Desconto de 10% aplicado. Novo preço: R$ " . number_format($produtoEncapsulado->getPreco(), 2, ',', '.') . "</p>";
-                            echo "</div>";
+                        // Simulando obtenção de conexão
+                        $pdo = $conexao->getConexao();
+                        
+                        if ($pdo) {
+                            echo "✓ Conexão estabelecida com sucesso!<br>";
+                            echo "Versão do PDO: " . $pdo->getAttribute(PDO::ATTR_SERVER_VERSION) . "<br>";
+                            echo "Driver: " . $pdo->getAttribute(PDO::ATTR_DRIVER_NAME) . "<br>";
+                        } else {
+                            echo "✗ Falha na conexão<br>";
                         }
                         
-                        echo "<p><strong>Conceito:</strong> Atributos privados com métodos get/set para controle de acesso.</p>";
-                        
                     } catch (Exception $e) {
-                        echo "<div class='warning'>Erro: " . $e->getMessage() . "</div>";
+                        echo "<strong>Erro na conexão:</strong><br>";
+                        echo "Mensagem: " . $e->getMessage() . "<br>";
+                        echo "Código: " . $e->getCode() . "<br>";
                     }
                     ?>
                 </div>
-            </div>
 
-            <!-- Exercício 3: Classe ContaBancaria -->
-            <div class="exercise-section">
-                <h3>🏦 Exercício 3: Classe ContaBancaria</h3>
-                <div class="result">
-                    <?php
-                    try {
-                        $conta = new ContaBancaria("001", "João Silva", "Corrente", 1000.00);
-                        
-                        echo "<div class='success'>";
-                        echo "<p><strong>Conta criada:</strong> " . $conta->exibirInfo() . "</p>";
-                        echo "</div>";
-                        
-                        if ($conta->depositar(500.00)) {
-                            echo "<div class='info'>";
-                            echo "<p>Depósito realizado. Novo saldo: R$ " . number_format($conta->getSaldo(), 2, ',', '.') . "</p>";
-                            echo "</div>";
-                        }
-                        
-                        if ($conta->sacar(300.00)) {
-                            echo "<div class='info'>";
-                            echo "<p>Saque realizado. Saldo atual: R$ " . number_format($conta->getSaldo(), 2, ',', '.') . "</p>";
-                            echo "</div>";
-                        }
-                        
-                        echo "<p><strong>Conceito:</strong> Encapsulamento com métodos para operações bancárias.</p>";
-                        
-                    } catch (Exception $e) {
-                        echo "<div class='warning'>Erro: " . $e->getMessage() . "</div>";
-                    }
-                    ?>
+                <div class="justification">
+                    <h4>Justificativa da Implementação:</h4>
+                    <p>O método conectar é privado para esconder detalhes técnicos da conexão. Apenas getConexao é público, fornecendo uma interface limpa para obter a conexão.</p>
                 </div>
             </div>
 
-            <!-- Exercício 4: Herança - Funcionario e Gerente -->
-            <div class="exercise-section">
-                <h3>👥 Exercício 4: Herança - Funcionario e Gerente</h3>
-                <div class="result">
-                    <?php
-                    try {
-                        $funcionario = new Funcionario("Carlos Silva", 2500.00, "Desenvolvedor", "F001");
-                        $gerente = new Gerente("Roberto Santos", 5000.00, "TI", "G001");
-                        
-                        echo "<div class='success'>";
-                        echo "<p><strong>Funcionário:</strong> " . $funcionario->exibirInfo() . "</p>";
-                        echo "<p><strong>Gerente:</strong> " . $gerente->exibirInfo() . "</p>";
-                        echo "</div>";
-                        
-                        echo "<div class='info'>";
-                        echo "<p><strong>Salário Líquido Funcionário:</strong> R$ " . number_format($funcionario->calcularSalarioLiquido(), 2, ',', '.') . "</p>";
-                        echo "<p><strong>Salário Líquido Gerente:</strong> R$ " . number_format($gerente->calcularSalarioLiquido(), 2, ',', '.') . "</p>";
-                        echo "</div>";
-                        
-                        echo "<p><strong>Conceito:</strong> Herança com atributos protegidos e sobrescrita de métodos.</p>";
-                        
-                    } catch (Exception $e) {
-                        echo "<div class='warning'>Erro: " . $e->getMessage() . "</div>";
-                    }
-                    ?>
-                </div>
-            </div>
+        </div>
 
-            <!-- Exercício 5: Classe Usuario -->
-            <div class="exercise-section">
-                <h3>👤 Exercício 5: Classe Usuario - Verificação de Senha</h3>
-                <div class="result">
-                    <?php
-                    try {
-                        $usuario = new Usuario("Maria Silva", "maria@email.com", "senha123");
-                        
-                        echo "<div class='success'>";
-                        echo "<p><strong>Usuário criado:</strong> " . $usuario->exibirInfo() . "</p>";
-                        echo "</div>";
-                        
-                        echo "<div class='info'>";
-                        echo "<p><strong>Verificação de senha 'senha123':</strong> " . ($usuario->verificarSenha('senha123') ? '✅ Correta' : '❌ Incorreta') . "</p>";
-                        echo "<p><strong>Verificação de senha 'senha456':</strong> " . ($usuario->verificarSenha('senha456') ? '✅ Correta' : '❌ Incorreta') . "</p>";
-                        echo "</div>";
-                        
-                        echo "<p><strong>Conceito:</strong> Encapsulamento de senha com hash e verificação segura.</p>";
-                        
-                    } catch (Exception $e) {
-                        echo "<div class='warning'>Erro: " . $e->getMessage() . "</div>";
-                    }
-                    ?>
-                </div>
-            </div>
-
-            <!-- Exercício 6: Herança - Config e Subclasses -->
-            <div class="exercise-section">
-                <h3>⚙️ Exercício 6: Herança - Config e Subclasses</h3>
-                <div class="result">
-                    <?php
-                    try {
-                        $configLeitura = new ConfigLeitura(['host' => 'localhost', 'porta' => 3306]);
-                        $configModificacao = new ConfigModificacao(['banco' => 'teste', 'usuario' => 'root']);
-                        
-                        echo "<div class='success'>";
-                        echo "<p><strong>Config Leitura:</strong> " . $configLeitura->getNumeroParametros() . " parâmetros</p>";
-                        echo "<p><strong>Config Modificação:</strong> " . $configModificacao->getNumeroParametros() . " parâmetros</p>";
-                        echo "</div>";
-                        
-                        $configModificacao->setParametro('senha', '123456');
-                        echo "<div class='info'>";
-                        echo "<p><strong>Novo parâmetro adicionado:</strong> " . $configModificacao->getNumeroParametros() . " parâmetros</p>";
-                        echo "</div>";
-                        
-                        echo "<p><strong>Conceito:</strong> Herança com diferentes níveis de acesso aos parâmetros.</p>";
-                        
-                    } catch (Exception $e) {
-                        echo "<div class='warning'>Erro: " . $e->getMessage() . "</div>";
-                    }
-                    ?>
-                </div>
-            </div>
-
-            <!-- Exercício 7: Classe Pedido -->
-            <div class="exercise-section">
-                <h3>📋 Exercício 7: Classe Pedido - Gerenciamento de Array</h3>
-                <div class="result">
-                    <?php
-                    try {
-                        $pedido = new Pedido("Cliente Exemplo");
-                        
-                        $pedido->inserirItem("Produto A", 2, 25.00);
-                        $pedido->inserirItem("Produto B", 1, 50.00);
-                        $pedido->inserirItem("Produto C", 3, 15.00);
-                        
-                        echo "<div class='success'>";
-                        echo "<p><strong>Pedido criado:</strong> " . $pedido->exibirInfo() . "</p>";
-                        echo "<p><strong>Total de itens:</strong> " . $pedido->getNumeroItens() . "</p>";
-                        echo "<p><strong>Valor total:</strong> R$ " . number_format($pedido->getValorTotal(), 2, ',', '.') . "</p>";
-                        echo "</div>";
-                        
-                        echo "<p><strong>Conceito:</strong> Encapsulamento de array privado com métodos para manipulação.</p>";
-                        
-                    } catch (Exception $e) {
-                        echo "<div class='warning'>Erro: " . $e->getMessage() . "</div>";
-                    }
-                    ?>
-                </div>
-            </div>
-
-            <!-- Exercício 8: Classe Cliente -->
-            <div class="exercise-section">
-                <h3>👤 Exercício 8: Classe Cliente - Diferentes Níveis de Acesso</h3>
-                <div class="result">
-                    <?php
-                    try {
-                        $cliente = new Cliente("João Silva", "12345678901", "11987654321");
-                        $clienteVip = new ClienteVip("Maria Santos", "98765432109", "11912345678");
-                        
-                        echo "<div class='success'>";
-                        echo "<p><strong>Cliente:</strong> " . $cliente->exibirInfo() . "</p>";
-                        echo "<p><strong>Cliente VIP:</strong> " . $clienteVip->exibirInfo() . "</p>";
-                        echo "</div>";
-                        
-                        echo "<div class='info'>";
-                        echo "<p><strong>Nome (público):</strong> " . $cliente->nome . "</p>";
-                        echo "<p><strong>CPF (protegido):</strong> " . $cliente->getCpf() . "</p>";
-                        echo "<p><strong>Telefone (privado):</strong> " . $cliente->getTelefone() . "</p>";
-                        echo "</div>";
-                        
-                        echo "<p><strong>Conceito:</strong> Diferentes níveis de acesso: público, protegido e privado.</p>";
-                        
-                    } catch (Exception $e) {
-                        echo "<div class='warning'>Erro: " . $e->getMessage() . "</div>";
-                    }
-                    ?>
-                </div>
-            </div>
-
-            <!-- Exercício 9: ContaBancaria Refatorada -->
-            <div class="exercise-section">
-                <h3>🏦 Exercício 9: ContaBancaria Refatorada - Validação de Saque</h3>
-                <div class="result">
-                    <?php
-                    try {
-                        $contaRefatorada = new ContaBancariaRefatorada("001", "João Silva", "Corrente", 1000.00, 500.00);
-                        
-                        echo "<div class='success'>";
-                        echo "<p><strong>Conta criada:</strong> " . $contaRefatorada->exibirInfo() . "</p>";
-                        echo "</div>";
-                        
-                        $resultadoSaque = $contaRefatorada->sacar(300.00);
-                        echo "<div class='info'>";
-                        echo "<p><strong>Resultado do saque:</strong> " . $resultadoSaque['mensagem'] . "</p>";
-                        echo "<p><strong>Saldo atual:</strong> R$ " . number_format($resultadoSaque['saldo'], 2, ',', '.') . "</p>";
-                        echo "</div>";
-                        
-                        $resultadoSaqueInvalido = $contaRefatorada->sacar(2000.00);
-                        echo "<div class='warning'>";
-                        echo "<p><strong>Tentativa de saque inválido:</strong> " . $resultadoSaqueInvalido['mensagem'] . "</p>";
-                        echo "</div>";
-                        
-                        echo "<p><strong>Conceito:</strong> Refatoração com validações robustas e tratamento de erros.</p>";
-                        
-                    } catch (Exception $e) {
-                        echo "<div class='warning'>Erro: " . $e->getMessage() . "</div>";
-                    }
-                    ?>
-                </div>
-            </div>
-
-            <!-- Exercício 10: Classe ConexaoBD -->
-            <div class="exercise-section">
-                <h3>🗄️ Exercício 10: Classe ConexaoBD - Encapsulamento de Conexão</h3>
-                <div class="result">
-                    <?php
-                    try {
-                        $conexao = new ConexaoBD([
-                            'host' => 'localhost',
-                            'banco' => 'exemplo',
-                            'usuario' => 'usuario_teste'
-                        ]);
-                        
-                        echo "<div class='success'>";
-                        echo "<p><strong>Objeto ConexaoBD criado com sucesso</strong></p>";
-                        echo "</div>";
-                        
-                        $info = $conexao->getInfoConexao();
-                        echo "<div class='info'>";
-                        echo "<p><strong>Host:</strong> " . $info['host'] . "</p>";
-                        echo "<p><strong>Banco:</strong> " . $info['banco'] . "</p>";
-                        echo "<p><strong>Usuário:</strong> " . $info['usuario'] . "</p>";
-                        echo "<p><strong>Status:</strong> " . ($info['conectado'] ? 'Conectado' : 'Desconectado') . "</p>";
-                        echo "</div>";
-                        
-                        echo "<p><strong>Conceito:</strong> Encapsulamento completo da conexão com método privado conectar() e público getConexao().</p>";
-                        
-                    } catch (Exception $e) {
-                        echo "<div class='warning'>Erro: " . $e->getMessage() . "</div>";
-                    }
-                    ?>
-                </div>
-            </div>
-
-            <!-- Resumo Final -->
-            <div class="summary">
-                <h4>🎯 Resumo da Implementação</h4>
-                <p><strong>Total de Exercícios Implementados:</strong> 10</p>
-                <p><strong>Conceitos Demonstrados:</strong></p>
-                <ul>
-                    <li><strong>Encapsulamento:</strong> Atributos privados/protegidos com métodos públicos</li>
-                    <li><strong>Herança:</strong> Classes base e derivadas com reutilização de código</li>
-                    <li><strong>Polimorfismo:</strong> Sobrescrita de métodos e comportamentos diferentes</li>
-                    <li><strong>Abstração:</strong> Interfaces claras e implementações ocultas</li>
-                </ul>
-                <p><strong>Nível de Complexidade:</strong> Adequado para 4ª fase de Ciência da Computação</p>
-                <p><strong>Padrões de Projeto:</strong> Getters/Setters, Factory, Singleton (implícito)</p>
-            </div>
-
-            <a href="index.html" class="btn">← Voltar ao Menu Principal</a>
+        <div class="footer">
+            <p><strong>Desenvolvido por:</strong> Aluno da 4ª Fase - Ciência da Computação</p>
+            <p><strong>Disciplina:</strong> Programação 2 - PHP</p>
+            <p><strong>Conceitos Aplicados:</strong> Encapsulamento, Herança, Polimorfismo, Abstração</p>
         </div>
     </div>
 </body>
